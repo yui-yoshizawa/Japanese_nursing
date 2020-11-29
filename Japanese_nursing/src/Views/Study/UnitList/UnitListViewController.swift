@@ -73,7 +73,7 @@ extension UnitListViewController {
 
         // loading
         viewModel.loadingDriver
-            .map { [weak self] isLoading in
+            .map { isLoading in
                 if isLoading {
                     return .loading
                 } else {
