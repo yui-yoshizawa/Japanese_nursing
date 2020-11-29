@@ -51,7 +51,7 @@ class LearningUnitViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
-    private var unitMasterId: Int = 0
+    private var unitMasterId: Int = 31
 
     private lazy var emptyView: EmptyView = {
         let v = R.nib.emptyView.firstView(owner: nil)!
