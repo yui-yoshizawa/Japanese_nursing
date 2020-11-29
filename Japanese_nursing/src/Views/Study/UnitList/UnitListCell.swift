@@ -77,10 +77,16 @@ extension UnitListCell {
         unitSubTitleLabel.text = item.japanese
         wordsCountLabel.text = String(item.wordCount) + "words"
 
-        let percentage = item.memorizedWordCount * 100 / item.wordCount
-        checkMarkPercentageLabel.text = String(percentage) + "%"
+        var percentage = 0
+        if item.wordCount == 0 {
+            // 0で割るとエラーがでるので、念の為
+            checkMarkPercentageLabel.text = "0%"
+        } else {
+            percentage = item.memorizedWordCount * 100 / item.wordCount
+            checkMarkPercentageLabel.text = String(percentage) + "%"
+        }
 
-        if item.memorizedWordCount == item.wordCount {
+        if item.memorizedWordCount == item.wordCount && percentage == 100 {
             completeBadge.isHidden = false
         } else {
             completeBadge.isHidden = true

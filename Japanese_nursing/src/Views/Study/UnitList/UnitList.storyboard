@@ -178,7 +178,7 @@
                                                                 <constraint firstItem="RAV-xT-QaQ" firstAttribute="top" secondItem="51D-DH-Y6B" secondAttribute="top" id="ipc-Uv-qvn"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH7-IS-fHc">
+                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH7-IS-fHc">
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="94"/>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete_badge" translatesAutoresizingMaskIntoConstraints="NO" id="WQz-Ud-FNL">

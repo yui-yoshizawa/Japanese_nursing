@@ -31,6 +31,11 @@
 		BA46290B2565780700D5AE8A /* TargetSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA46290A2565780700D5AE8A /* TargetSettingViewController.storyboard */; };
 		BA46290E2565782400D5AE8A /* TargetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46290D2565782400D5AE8A /* TargetSettingViewController.swift */; };
 		BA5097AB25739CBA00FB88AE /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097AA25739CBA00FB88AE /* UIView+AutoLayout.swift */; };
+		BA5097DD2573B8D500FB88AE /* GetWordMasters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097DC2573B8D500FB88AE /* GetWordMasters.swift */; };
+		BA5097E12573B99300FB88AE /* WordMastersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097E02573B99300FB88AE /* WordMastersEntity.swift */; };
+		BA5097E62573C2B600FB88AE /* GetWordMastersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097E52573C2B600FB88AE /* GetWordMastersModel.swift */; };
+		BA5097EC2573C6B400FB88AE /* LearningUnitDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097EB2573C6B400FB88AE /* LearningUnitDomainModel.swift */; };
+		BA5097F02573C7D800FB88AE /* LearningUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5097EF2573C7D800FB88AE /* LearningUnitViewModel.swift */; };
 		BA582A3924E170670089DA0B /* LearningUnit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA582A3824E170670089DA0B /* LearningUnit.storyboard */; };
 		BA5EACE324D2AF8F0008E2D0 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */; };
 		BA5EAD4C24D453520008E2D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */; };
@@ -110,6 +115,11 @@
 		BA46290A2565780700D5AE8A /* TargetSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetSettingViewController.storyboard; sourceTree = "<group>"; };
 		BA46290D2565782400D5AE8A /* TargetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSettingViewController.swift; sourceTree = "<group>"; };
 		BA5097AA25739CBA00FB88AE /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		BA5097DC2573B8D500FB88AE /* GetWordMasters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordMasters.swift; sourceTree = "<group>"; };
+		BA5097E02573B99300FB88AE /* WordMastersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMastersEntity.swift; sourceTree = "<group>"; };
+		BA5097E52573C2B600FB88AE /* GetWordMastersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordMastersModel.swift; sourceTree = "<group>"; };
+		BA5097EB2573C6B400FB88AE /* LearningUnitDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitDomainModel.swift; sourceTree = "<group>"; };
+		BA5097EF2573C7D800FB88AE /* LearningUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningUnitViewModel.swift; sourceTree = "<group>"; };
 		BA582A3824E170670089DA0B /* LearningUnit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearningUnit.storyboard; sourceTree = "<group>"; };
 		BA5EACE224D2AF8F0008E2D0 /* UnitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		BA5EAD4B24D453520008E2D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FetiLip-develop/fetilip/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -287,6 +297,47 @@
 			path = TargetSetting;
 			sourceTree = "<group>";
 		};
+		BA5097DB2573B8BC00FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA5097DC2573B8D500FB88AE /* GetWordMasters.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA5097DF2573B97F00FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA5097E02573B99300FB88AE /* WordMastersEntity.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA5097E42573C29A00FB88AE /* WordMasters */ = {
+			isa = PBXGroup;
+			children = (
+				BA5097E52573C2B600FB88AE /* GetWordMastersModel.swift */,
+			);
+			path = WordMasters;
+			sourceTree = "<group>";
+		};
+		BA5097E92573C65300FB88AE /* UnitList */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */,
+				BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */,
+			);
+			path = UnitList;
+			sourceTree = "<group>";
+		};
+		BA5097EA2573C66300FB88AE /* LearningUnit */ = {
+			isa = PBXGroup;
+			children = (
+				BA5097EB2573C6B400FB88AE /* LearningUnitDomainModel.swift */,
+			);
+			path = LearningUnit;
+			sourceTree = "<group>";
+		};
 		BA582A3724E170190089DA0B /* LearningUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +502,7 @@
 			children = (
 				BAD1CFE72571F66100F9A74A /* CreateUser */,
 				BAF1EABD25733AC200E19657 /* UnitMasters */,
+				BA5097DB2573B8BC00FB88AE /* WordMasters */,
 				BAD1CFEC2571F6A500F9A74A /* JapaneseNursingAPI.swift */,
 			);
 			path = Communications;
@@ -469,6 +521,7 @@
 			children = (
 				BAF1EAC125733BC900E19657 /* CreateUser */,
 				BAF1EAC225733BD200E19657 /* UnitMasters */,
+				BA5097DF2573B97F00FB88AE /* WordMasters */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -495,6 +548,7 @@
 			children = (
 				BAF1EAC725733D1D00E19657 /* CreateUser */,
 				BAF1EAC825733D2500E19657 /* UnitMasters */,
+				BA5097E42573C29A00FB88AE /* WordMasters */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -615,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF1EACE25733E0E00E19657 /* UnitListViewModel.swift */,
+				BA5097EF2573C7D800FB88AE /* LearningUnitViewModel.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -622,8 +677,8 @@
 		BAF1EAD225733E8400E19657 /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				BAF1EAD425733EB800E19657 /* UnitListDomainModel.swift */,
-				BAF1EAD725734F8600E19657 /* UnitListSectionModel.swift */,
+				BA5097EA2573C66300FB88AE /* LearningUnit */,
+				BA5097E92573C65300FB88AE /* UnitList */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -860,20 +915,25 @@
 				BA46290325640E6300D5AE8A /* OverlayView.swift in Sources */,
 				BAD1CFFF2571F7F500F9A74A /* Session+RxSwift.swift in Sources */,
 				BAE31B7A2555A87900A3FC6D /* Array+Extended.swift in Sources */,
+				BA5097E12573B99300FB88AE /* WordMastersEntity.swift in Sources */,
 				BAD1CFE92571F67200F9A74A /* CreateUser.swift in Sources */,
 				BAD1D0062571F87E00F9A74A /* BaseTextField.swift in Sources */,
+				BA5097EC2573C6B400FB88AE /* LearningUnitDomainModel.swift in Sources */,
 				BAD1D0182571F98D00F9A74A /* JsonMappable.swift in Sources */,
 				BA1E5B2F2487AC210055A5F4 /* AppDelegate.swift in Sources */,
 				BA2DF386255859E400064DA8 /* MyPageViewController.swift in Sources */,
 				BAD1CFF42571F72000F9A74A /* CreateUserEntity.swift in Sources */,
 				BAD1D00D2571F8E400F9A74A /* UITextField+IBInspectable.swift in Sources */,
 				BA00E855255DA29C001C4E06 /* SettingListViewController.swift in Sources */,
+				BA5097DD2573B8D500FB88AE /* GetWordMasters.swift in Sources */,
 				BA66D67D24A6ECF000BE7273 /* TabBarController.swift in Sources */,
 				BAD1CFED2571F6A500F9A74A /* JapaneseNursingAPI.swift in Sources */,
 				BA1E5B312487AC210055A5F4 /* SceneDelegate.swift in Sources */,
 				BAF1EACF25733E0E00E19657 /* UnitListViewModel.swift in Sources */,
 				BAD1D0032571F83F00F9A74A /* CreateUserModel.swift in Sources */,
 				BAF1EABF25733ADF00E19657 /* GetUnitMasters.swift in Sources */,
+				BA5097E62573C2B600FB88AE /* GetWordMastersModel.swift in Sources */,
+				BA5097F02573C7D800FB88AE /* LearningUnitViewModel.swift in Sources */,
 				BA85A3FE24AB7F51003E6E85 /* R.generated.swift in Sources */,
 				BA40295D255436B800421276 /* TestSettingsViewController.swift in Sources */,
 				BAD1CFF82571F74900F9A74A /* APIEvent.swift in Sources */,

@@ -15,8 +15,9 @@ import SCLAlertView
 /**
  * 学習画面VC
  */
-// TODO: 設定作成後にUIの調整をする
 class LearningUnitViewController: UIViewController {
+
+    private lazy var viewModel: LearningUnitViewModel = LearningUnitViewModel()
 
     // MARK: - Outlets
 
@@ -50,12 +51,28 @@ class LearningUnitViewController: UIViewController {
 
     private var disposeBag = DisposeBag()
 
+    private var unitMasterId: Int = 0
+
+    private lazy var emptyView: EmptyView = {
+        let v = R.nib.emptyView.firstView(owner: nil)!
+        v.backgroundColor = .clear
+        v.retryAction = { [weak self] in
+            self?.fetch()
+        }
+        v.page = .learn
+        v.status = .none
+        view.addSubview(v)
+        view.allSafePin(subView: v)
+        return v
+    }()
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         subscribe()
+        fetch()
 
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -85,6 +102,28 @@ class LearningUnitViewController: UIViewController {
             self?.kolodaView.swipe(.left)
             self?.cardSwipingSubject.onNext(())
         }).disposed(by: disposeBag)
+
+        // loading
+        viewModel.loadingDriver
+            .map { isLoading in
+                if isLoading {
+                    return .loading
+                } else {
+                    return .none
+                }
+            }
+            .drive(onNext: {[weak self] in
+                self?.emptyView.status = $0
+            }).disposed(by: disposeBag)
+    }
+
+    private func fetch() {
+        viewModel.fetch(authToken: ApplicationConfigData.authToken, unitMasterId: unitMasterId)
+            .subscribe(
+                onError: { [unowned self] in
+                    log.error($0.descriptionOfType)
+                    self.emptyView.status = .errorAndRetry($0.descriptionOfType)
+                }).disposed(by: disposeBag)
     }
 
     /// 進捗バーを更新する
